@@ -1,0 +1,13 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp & scratch logs
+*recovered*
+*step*.txt
+debug_*.js
+*.log
