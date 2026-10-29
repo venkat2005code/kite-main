@@ -7,6 +7,7 @@
   "beach gear":"beach-gear.html","outdoor beach gear":"beach-gear.html",
   "events":"events.html","events & festivals":"events.html","festivals":"events.html",
   "buying guide":"buying-guide.html","wind buying guide":"buying-guide.html",
+  "about":"about.html","about us":"about.html","our story":"about.html",
   "contact":"contact.html","gear support":"contact.html","support":"contact.html"
  };
  const norm=s=>(s||"").replace(/\s+/g," ").trim().toLowerCase();
@@ -116,6 +117,7 @@
    "buying-guide":"Guide",
    "events-festivals":"Events",
    "outdoor-gear":"Beach",
+   "about-us":"About",
    "contact-support":"Help"
   };
   if(desktopNav){
@@ -139,6 +141,7 @@
     "buying-guide.html":["Guide","Choose by wind"],
     "events.html":["Events","Fly-ins and festivals"],
     "beach-gear.html":["Beach","Shelters and gear"],
+    "about.html":["About","Our story"],
     "contact.html":["Help","Advice and repairs"]
    };
    Object.entries(mobileLabels).forEach(([href,[label,description]])=>{
@@ -193,6 +196,7 @@
    "buying-guide":"buying-guide.html",
    "events-festivals":"events.html",
    "outdoor-gear":"beach-gear.html",
+   "about-us":"about.html",
    "contact-support":"contact.html"
   };
   document.querySelectorAll('a[href="#"]').forEach(a=>{
@@ -298,6 +302,9 @@
      if(a) a.setAttribute("aria-current", "page");
    } else if(curPath === "beach-gear.html"){
      const a = desktopNav.querySelector('a[data-path="outdoor-gear"]');
+     if(a) a.setAttribute("aria-current", "page");
+   } else if(curPath === "about.html"){
+     const a = desktopNav.querySelector('a[data-path="about-us"]');
      if(a) a.setAttribute("aria-current", "page");
    } else if(curPath === "contact.html"){
      const a = desktopNav.querySelector('a[data-path="contact-support"]');
